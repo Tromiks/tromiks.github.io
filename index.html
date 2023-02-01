@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JavaScript Quiz</title>
+  </head>
+  <body>
+    <h1>JavaScript Quiz</h1>
+    <form id="quiz">
+      <p>Question 1: What is the difference between let and var in JavaScript?</p>
+      <input type="radio" name="q1" value="A">var is function scoped while let is block scoped<br>
+      <input type="radio" name="q1" value="B">let is function scoped while var is block scoped<br>
+      <input type="radio" name="q1" value="C">var and let are both function scoped<br>
+      <br>
+      <p>Question 2: What is closure in JavaScript?</p>
+      <input type="radio" name="q2" value="A">A function that returns another function<br>
+      <input type="radio" name="q2" value="B">A function that returns an object<br>
+      <input type="radio" name="q2" value="C">A function that returns a string<br>
+      <br>
+      <p>Question 3: What is hoisting in JavaScript?</p>
+      <input type="radio" name="q3" value="A">The behavior of moving function and variable declarations to the top of their respective scopes<br>
+      <input type="radio" name="q3" value="B">The behavior of moving function and variable declarations to the bottom of their respective scopes<br>
+      <input type="radio" name="q3" value="C">The behavior of removing function and variable declarations<br>
+      <br>
+    </form>
+    <button onclick="checkAnswers()">Submit</button>
+    <script>
+      function checkAnswers() {
+        var score = 0;
+        var answers = ["A", "A", "A"];
+        for (var i = 0; i < 3; i++) {
+          var q = i + 1;
+          var answer = document.querySelector('input[name="q' + q + '"]:checked').value;
+          if (answer === answers[i]) {
+            score++;
+          }
+        }
+        alert("You scored " + score + " out of 3");
+      }
+    </script>
+  </body>
+</html>
