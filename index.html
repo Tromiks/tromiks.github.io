@@ -2,8 +2,26 @@
 <html>
   <head>
     <title>JavaScript Quiz</title>
+    <style>
+      body {
+        background-color: white;
+      }
+  
+      .black-mode {
+        background-color: black !important;
+        color: white;
+      }
+    </style>
   </head>
   <body>
+    <button id="toggleBtn">Toggle Black/White</button>
+    <script>
+      const toggleBtn = document.querySelector("#toggleBtn");
+  
+      toggleBtn.addEventListener("click", function () {
+        document.body.classList.toggle("black-mode");
+      });
+    </script>
     <h1>JavaScript Quiz</h1>
     <form id="quiz">
       <p>Question 1: What is the difference between let and var in JavaScript?</p>
@@ -37,5 +55,9 @@
         alert("You scored " + score + " out of 3");
       }
     </script>
+<button id="toggleBtn">Toggle Black/White</button>
+
+
+
   </body>
 </html>
